@@ -5,9 +5,11 @@ import com.auth0.example.AdminService
 import com.auth0.spring.security.mvc.Auth0UserDetails
 import com.auth0.Auth0User
 import com.auth0.spring.security.mvc.Auth0Config
+import groovy.util.logging.Log4j
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.security.core.context.SecurityContextHolder
 
+@Log4j
 class HomeController {
 
     static defaultAction = "home"

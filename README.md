@@ -28,8 +28,8 @@ grails --version
 FYI only, in creating this sample, the following SDK versions were used:
 
  ```
-Grails Version: 3.1.9
-Groovy Version: 2.4.7
+Grails Version: 3.3.2
+Groovy Version: 2.4.13
 JVM Version: 1.8.0_77
  ```
 
@@ -40,7 +40,9 @@ Create an [Auth0 Account](https://auth0.com) (if not already done so - free!).
 
 #### From the Auth0 Dashboard
 
-Create an application - for the purposes of this sample - `app`
+Create a client - for the purposes of this sample - `app`
+
+##### In the client's "settings" tab:
 
 Ensure you add the following to the settings.
 
@@ -61,6 +63,12 @@ http://localhost:3099/logout
 Add one or more `connections` to your application - for instance Google Social Connection,
 or username-password DB connection.
 
+##### In "Advanced Settings"
+
+Under the OAuth tab, change the JsonWebToken Signature Algorithm to HS256.
+
+Alternatively, download the certificate available in the Certificates tab and make appropriate changes to your
+auth0.properties file to use the certificate and the default RS256 signature algorithm.
 
 ###### Add Role Based Authorization By Creating an Auth0 Rule
 
