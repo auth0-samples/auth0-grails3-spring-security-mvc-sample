@@ -3,8 +3,10 @@ package auth0.grails3.mvc.sample
 import com.auth0.spring.security.mvc.Auth0Config
 import com.auth0.NonceUtils
 import com.auth0.SessionUtils
+import groovy.util.logging.Log4j
 import org.springframework.beans.factory.annotation.Autowired
 
+@Log4j
 class LoginController {
 
     static defaultAction = "login"
